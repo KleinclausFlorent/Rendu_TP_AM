@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="BAuthentif">#000</color>
+    <color name="ButBack">#FF51B8E7</color>
+    <color name="ButText">#ffffff</color>
+    <color name="red">#ff0000</color>
+</resources>

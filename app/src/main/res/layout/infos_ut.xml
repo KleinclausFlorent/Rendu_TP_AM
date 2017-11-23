@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView_Civ_IU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:hint="@string/Cex"
+        android:textSize="@dimen/big_text"
+        android:textColor="@color/BAuthentif"/>
+
+
+
+    <TextView
+        android:id="@+id/textView_Nom_IU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/textView_Civ_IU"
+        android:hint="@string/Nex"
+        android:textSize="@dimen/big_text"
+        android:textColor="@color/BAuthentif"/>
+
+
+
+    <TextView
+        android:id="@+id/textView_Prenom_IU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/textView_Nom_IU"
+        android:hint="@string/Pex"
+        android:textSize="@dimen/big_text"
+        android:textColor="@color/BAuthentif"/>
+
+
+    <TextView
+        android:id="@+id/textView_DateN_IU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/textView_Prenom_IU"
+        android:hint="@string/Dex"
+        android:textSize="@dimen/big_text"
+        android:textColor="@color/BAuthentif" />
+
+
+    <TextView
+        android:id="@+id/textView_mail_IU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/textView_DateN_IU"
+        android:hint="@string/Mex"
+        android:textSize="@dimen/big_text"
+        android:textColor="@color/BAuthentif"/>
+
+
+    <TextView
+        android:id="@+id/textView_Adres_IU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/textView_mail_IU"
+        android:hint="@string/Aex"
+        android:textSize="@dimen/big_text"
+        android:textColor="@color/BAuthentif"/>
+
+
+    <TextView
+        android:id="@+id/textView_Com_IU"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@id/button_Sport"
+        android:layout_below="@id/textView_Adres_IU"
+        android:hint="@string/Com"
+        android:textSize="@dimen/big_text"
+        android:textColor="@color/BAuthentif"/>
+
+    <Button
+        android:id="@+id/button_Sport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_Acc"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Sport"
+        android:textAllCaps="false"
+        android:textColor="@color/ButText"
+        android:background="@color/ButBack"/>
+    <Button
+        android:id="@+id/button_Acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Acc"
+        android:textAllCaps="false"
+        android:textColor="@color/ButText"
+        android:background="@color/ButBack"/>
+
+
+
+</RelativeLayout>

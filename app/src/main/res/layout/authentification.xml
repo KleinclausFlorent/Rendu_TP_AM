@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/radioSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textView_Civ"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/textView_Civ"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/radioButton_Mr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Mr"
+            android:textSize="@dimen/normal_text"
+            android:textColor="@color/BAuthentif" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Mme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/BAuthentif"
+            android:text="@string/Mme"
+            android:textSize="@dimen/normal_text"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView_Civ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/Civ"
+        android:textSize="@dimen/big_text"
+        android:textColor="@color/BAuthentif"/>
+
+    <TextView
+    android:id="@+id/textView_Nom"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_below="@id/textView_Civ"
+    android:text="@string/Nom"
+    android:textSize="@dimen/big_text"
+    android:textColor="@color/BAuthentif"/>
+
+    <TextView
+        android:id="@+id/textView_Prenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/textView_Nom"
+        android:text="@string/Prénom"
+        android:textSize="@dimen/big_text"
+        android:textColor="@color/BAuthentif"/>
+
+    <TextView
+        android:id="@+id/textView_DateN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/textView_Prenom"
+        android:text="@string/DateN"
+        android:textSize="@dimen/big_text"
+        android:textColor="@color/BAuthentif"/>
+
+    <TextView
+        android:id="@+id/textView_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/textView_DateN"
+        android:text="@string/Mail"
+        android:textSize="@dimen/big_text"
+        android:textColor="@color/BAuthentif"/>
+
+    <TextView
+        android:id="@+id/textView_Adres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/textView_mail"
+        android:text="@string/Adre"
+        android:textSize="@dimen/big_text"
+        android:textColor="@color/BAuthentif"/>
+
+    <TextView
+        android:id="@+id/textView_Com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/textView_Adres"
+        android:text="@string/Com"
+        android:textSize="@dimen/big_text"
+        android:textColor="@color/BAuthentif"/>
+
+    <EditText
+        android:id="@+id/editText_DateN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView_DateN"
+        android:layout_alignTop="@id/textView_DateN"
+        android:layout_toEndOf="@+id/textView_DateN"
+        android:layout_toRightOf="@+id/textView_DateN"
+        android:inputType="date"
+        android:hint="@string/Dex"/>
+
+    <EditText
+        android:id="@+id/editText_Nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView_Nom"
+        android:layout_alignTop="@id/textView_Nom"
+        android:layout_toEndOf="@+id/textView_Nom"
+        android:layout_toRightOf="@+id/textView_Nom"
+        android:inputType="textPersonName"
+        android:hint="@string/Nex" />
+
+    <EditText
+        android:id="@+id/editText_Prenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView_Prenom"
+        android:layout_alignTop="@id/textView_Prenom"
+        android:layout_toEndOf="@+id/textView_Prenom"
+        android:layout_toRightOf="@+id/textView_Prenom"
+        android:inputType="textPersonName"
+        android:hint="@string/Pex" />
+
+    <EditText
+        android:id="@+id/editText_Mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView_mail"
+        android:layout_alignTop="@id/textView_mail"
+        android:layout_toEndOf="@+id/textView_mail"
+        android:layout_toRightOf="@+id/textView_mail"
+        android:inputType="textEmailAddress"
+        android:hint="@string/Mex"/>
+
+    <EditText
+        android:id="@+id/editText_Adres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView_Adres"
+        android:layout_alignTop="@id/textView_Adres"
+        android:layout_toEndOf="@+id/textView_Adres"
+        android:layout_toRightOf="@+id/textView_Adres"
+        android:inputType="textPostalAddress"
+        android:hint="@string/Aex"/>
+
+    <EditText
+        android:id="@+id/editText_Com"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView_Com"
+        android:layout_above="@id/button_Val"
+        android:inputType="textPersonName"
+        android:hint="@string/Com" />
+
+    <Button
+        android:id="@+id/button_Val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Val"
+        android:textAllCaps="false"
+        android:textColor="@color/ButText"
+        android:background="@color/ButBack"/>
+</RelativeLayout>
