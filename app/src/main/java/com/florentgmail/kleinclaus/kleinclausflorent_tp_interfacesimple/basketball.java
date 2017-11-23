@@ -23,8 +23,8 @@ public class basketball  extends AppCompatActivity {
 
 
         final Intent MonIntentBasket = getIntent();
-        final TextView name = (TextView)findViewById(R.id.textView_Nom_Hand);
-        final TextView fname = (TextView)findViewById(R.id.textView_Prenom_Hand);
+        final TextView name = (TextView)findViewById(R.id.textView_Nom_Basket);
+        final TextView fname = (TextView)findViewById(R.id.textView_Prenom_Basket);
 
 
         if (MonIntentBasket!= null) {
@@ -39,7 +39,7 @@ public class basketball  extends AppCompatActivity {
             public void onClick(View view) {
                 Intent MonIntentBasketAcc = new Intent(basketball.this,MainActivity.class);
 
-                startActivity(MonIntentBasket);
+                startActivity(MonIntentBasketAcc);
             }
         });
 
@@ -56,6 +56,6 @@ public class basketball  extends AppCompatActivity {
             }
         });
 
-        
+
     }
 }
