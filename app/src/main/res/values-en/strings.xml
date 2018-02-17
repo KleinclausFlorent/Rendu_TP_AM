@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KleinclausFlorent_TP-InterfaceSimple</string>
+    <string name="Start">Start</string>
+    <string name="Val">Validate</string>
+    <string name="Mr">Mister</string>
+    <string name="Mme">Miss</string>
+    <string name="Civ">Civility :</string>
+    <string name="Nom">Last Name :</string>
+    <string name="Prénom">First Name :</string>
+    <string name="DateN">Birthday :</string>
+    <string name="Mail">Mail :</string>
+    <string name="Adre">Adress :</string>
+    <string name="Com">Commentaries :</string>
+    <string name="Sport">Sports</string>
+    <string name="Acc">Home</string>
+    <string name="DefFoot">A sport in which two teams of eleven players each seek to send a spherical ball to the opposing goal, with the feet, the head or any other part of the body (except the hand or the arm).</string>
+    <string name="DefHand">"Handball is a collective sport played by hand where two teams of seven players face a ball by respecting several rules on a separate field in two camps. "</string>
+    <string name="DefBask">The goal is to score more points than the opposing team by scoring baskets, ie by passing the ball through a ring placed several meters above the ground.</string>
+    <string name="Cex">Mister</string>
+</resources>

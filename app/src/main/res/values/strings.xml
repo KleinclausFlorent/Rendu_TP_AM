@@ -1,4 +1,5 @@
 <resources>
+    <!-- commentaire  les balises <u> <i> et <b> du html fonctionne en xml-->
     <string name="app_name">KleinclausFlorent_TP-InterfaceSimple</string>
     <string name="Start">Commencer</string>
     <string name="Val">Valider</string>
@@ -13,16 +14,32 @@
     <string name="Com">Commentaires :</string>
     <string name="Sport">Sports</string>
     <string name="Acc">Accueil</string>
-    <string name="Foot">Football</string>
+    <string name="Foot" translatable="false">Football</string>
     <string name="DefFoot">Sport dans lequel deux équipes de onze joueurs chacune cherchent à envoyer dans le but adverse un ballon sphérique, avec les pieds, la tête ou toute autre partie du corps (excepté la main ou le bras).</string>
-    <string name="Hand">Handball</string>
-    <string name="DefHand">Le handball est un sport collectif joué à la main où deux équipes de sept joueurs s affrontent avec un ballon en respectant plusieurs règles sur un terrain séparé en deux camps.</string>
-    <string name="Bask">Basketball</string>
-    <string name="DefBask">Le but est de marquer plus de points que l équipe adverse en marquant des paniers, c est-à-dire en faisant passer le ballon à travers un anneau placé à plusieurs mètres du sol</string>
+    <string name="Hand" translatable="false">Handball</string>
+    <string name="DefHand">Le handball est un sport collectif joué à la main où deux équipes de sept joueurs s\'affrontent avec un ballon en respectant plusieurs règles sur un terrain séparé en deux camps.</string>
+    <string name="Bask" translatable="false">Basketball</string>
+    <string name="DefBask">Le but est de marquer plus de points que l\'équipe adverse en marquant des paniers, c\'est-à-dire en faisant passer le ballon à travers un anneau placé à plusieurs mètres du sol.</string>
     <string name="Cex">Monsieur</string>
-    <string name="Nex">Kleinclaus</string>
-    <string name="Pex">Florent</string>
-    <string name="Dex">18/02/1994</string>
-    <string name="Mex">kleinclaus.florent@gmail.com</string>
-    <string name="Aex">8, rue des iris Fegersheim</string>
+    <string name="Nex" translatable="false">Kleinclaus</string>
+    <string name="Pex" translatable="false">Florent</string>
+    <string name="Dex" translatable="false">18/02/1994</string>
+    <string name="Mex" translatable="false">kleinclaus.florent@gmail.com</string>
+    <string name="Aex" translatable="false">8, rue des iris Fegersheim</string>
+
+    <string-array name="jour">
+        <item>Lundi</item>
+        <item>Mardi</item>
+        <item>Mercredi</item>
+        <item>Jeudi</item>
+        <item>Vendredi</item>
+        <item>Samedi</item>
+        <item>Dimanche</item>
+    </string-array>
+
+    <string-array name="ListSport">
+        <item>Football</item>
+        <item>Basketball</item>
+        <item>Handball</item>
+    </string-array>
 </resources>

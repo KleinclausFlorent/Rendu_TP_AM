@@ -5,31 +5,42 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
  * Created by Kleinclaus Florent on 23/11/2017.
  */
 
-public class football  extends AppCompatActivity {
+public class defSport extends AppCompatActivity {
 
     final String EXTRA_NAME = "user_name";
     final String EXTRA_FNAME = "user_Fname";
 
+    final String EXTRA_SNAME = "sport_name";
+    final int EXTRA_SICON = 0;
+    final String EXTRA_SDEF = "sport_def";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.football);
+        setContentView(R.layout.defsport);
 
 
-        final Intent MonIntentFoot = getIntent();
+        final Intent MonIntentSport = getIntent();
         final TextView name = (TextView)findViewById(R.id.textView_Nom_Foot);
         final TextView fname = (TextView)findViewById(R.id.textView_Prenom_Foot);
+        final TextView sname = (TextView) findViewById(R.id.textView_Sports_Title);
+        final TextView sdef = (TextView) findViewById(R.id.textView_DefSport);
+        final ImageView sicon = (ImageView) findViewById(R.id.imageView_IconSport);
 
 
-        if (MonIntentFoot!= null) {
-            name.setText(MonIntentFoot.getStringExtra(EXTRA_NAME));
-            fname.setText(MonIntentFoot.getStringExtra(EXTRA_FNAME));
+        if (MonIntentSport!= null) {
+            name.setText(MonIntentSport.getStringExtra(EXTRA_NAME));
+            fname.setText(MonIntentSport.getStringExtra(EXTRA_FNAME));
+            sname.setText(MonIntentSport.getStringExtra(EXTRA_SNAME));
+            sdef.setText(MonIntentSport.getStringExtra(EXTRA_SDEF));
+            sicon.setImageResource(MonIntentSport.getIntExtra(String.valueOf(EXTRA_SICON),1));
         }
 
         final Button ButtonFootAccc =(Button)findViewById(R.id.button_Acc_Foot);
@@ -37,7 +48,7 @@ public class football  extends AppCompatActivity {
         ButtonFootAccc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent MonIntentFootAcc = new Intent(football.this,MainActivity.class);
+                Intent MonIntentFootAcc = new Intent(defSport.this,MainActivity.class);
 
                 startActivity(MonIntentFootAcc);
             }
@@ -48,7 +59,7 @@ public class football  extends AppCompatActivity {
         ButtonFootSP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent MonIntentFootSP = new Intent(football.this,sports.class);
+                Intent MonIntentFootSP = new Intent(defSport.this,sports.class);
                 MonIntentFootSP.putExtra(EXTRA_NAME, name.getText().toString());
                 MonIntentFootSP.putExtra(EXTRA_FNAME, fname.getText().toString());
 

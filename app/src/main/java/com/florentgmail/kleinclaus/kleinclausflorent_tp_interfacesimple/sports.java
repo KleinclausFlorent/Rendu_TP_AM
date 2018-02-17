@@ -4,8 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 /**
  * Created by Kleinclaus Florent on 23/11/2017.
@@ -16,11 +20,18 @@ public class sports extends AppCompatActivity {
     final String EXTRA_NAME = "user_name";
     final String EXTRA_FNAME = "user_Fname";
 
+    final String EXTRA_SNAME = "sport_name";
+    final int EXTRA_SICON = 0 ;
+    final String EXTRA_SDEF = "sport_def";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sports);
+        setContentView(R.layout.sports_list);
 
+        ArrayList<SportClass> sportList = new ArrayList<SportClass>();
+
+        initList(sportList);
 
         final Intent MonIntentSports = getIntent();
         final TextView name = (TextView)findViewById(R.id.textView_Nom_Sports);
@@ -31,6 +42,29 @@ public class sports extends AppCompatActivity {
             name.setText(MonIntentSports.getStringExtra(EXTRA_NAME));
             fname.setText(MonIntentSports.getStringExtra(EXTRA_FNAME));
         }
+
+        SportAdapter adapter = new SportAdapter(getApplicationContext(),R.layout.sports, sportList);
+        final ListView list = (ListView) findViewById(R.id.myList);
+        list.setAdapter(adapter);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {
+                Intent MonIntentSport = new Intent(sports.this,defSport.class);
+
+                SportClass selectedItem = (SportClass) adapter.getItemAtPosition(position);
+                MonIntentSport.putExtra(EXTRA_SNAME, selectedItem.getSportName());
+                MonIntentSport.putExtra(String.valueOf(EXTRA_SICON), selectedItem.getImgRes());
+                MonIntentSport.putExtra(EXTRA_SDEF, selectedItem.getSportDef());
+
+                MonIntentSport.putExtra(EXTRA_NAME, name.getText().toString());
+                MonIntentSport.putExtra(EXTRA_FNAME, fname.getText().toString());
+
+                startActivity(MonIntentSport);
+            }
+        });
+
+
+
 
         final Button ButtonSportsAccc =(Button)findViewById(R.id.button_Acc_Sports);
 
@@ -43,42 +77,37 @@ public class sports extends AppCompatActivity {
             }
         });
 
-        final Button ButtonSpFoot =(Button)findViewById(R.id.button_Foot);
 
-        ButtonSpFoot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent MonIntentSpfoot = new Intent(sports.this,football.class);
-                MonIntentSpfoot.putExtra(EXTRA_NAME, name.getText().toString());
-                MonIntentSpfoot.putExtra(EXTRA_FNAME, fname.getText().toString());
 
-                startActivity(MonIntentSpfoot);
-            }
-        });
-        final Button ButtonSpHand =(Button)findViewById(R.id.button_Hand);
+    }
 
-        ButtonSpHand.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent MonIntentSpHand = new Intent(sports.this, handball.class);
-                MonIntentSpHand.putExtra(EXTRA_NAME, name.getText().toString());
-                MonIntentSpHand.putExtra(EXTRA_FNAME, fname.getText().toString());
+    private void initList(ArrayList<SportClass> sportList)
+    {
+        String name = getString(R.string.Hand);
+        String def = getString(R.string.DefHand);
 
-                startActivity(MonIntentSpHand);
-            }
-        });
+        SportClass sportHandball = new SportClass();
+        sportHandball.setSportName(name);
+        sportHandball.setSportDef(def);
+        sportHandball.setImgRes(R.drawable.handball);
+        sportList.add(sportHandball);
 
-        final Button ButtonSpBasket =(Button)findViewById(R.id.button_Basket);
+        name = getString(R.string.Foot);
+        def = getString(R.string.DefFoot);
 
-        ButtonSpBasket.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent MonIntentSpBasket = new Intent(sports.this,basketball.class);
-                MonIntentSpBasket.putExtra(EXTRA_NAME, name.getText().toString());
-                MonIntentSpBasket.putExtra(EXTRA_FNAME, fname.getText().toString());
+        SportClass sportFootball = new SportClass();
+        sportFootball.setSportName(name);
+        sportFootball.setSportDef(def);
+        sportFootball.setImgRes(R.drawable.football);
+        sportList.add(sportFootball);
 
-                startActivity(MonIntentSpBasket);
-            }
-        });
+        name = getString(R.string.Bask);
+        def = getString(R.string.DefBask);
+
+        SportClass sportBasketball = new SportClass();
+        sportBasketball.setSportName(name);
+        sportBasketball.setSportDef(def);
+        sportBasketball.setImgRes(R.drawable.basket);
+        sportList.add(sportBasketball);
     }
 }
