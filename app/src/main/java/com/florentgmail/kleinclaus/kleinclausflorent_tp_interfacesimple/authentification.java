@@ -11,6 +11,9 @@ import android.widget.RadioGroup;
 
 /**
  * Created by Kleinclaus Florent on 22/11/2017.
+ * BUT : Réaction au remplissage du formulaire d'authentification et transmission des informations
+ * ENTREE : Les éléments de la vue
+ * Sortie : Transmission des infos utilisateurs à la page suivante
  */
 
 public class authentification extends AppCompatActivity {

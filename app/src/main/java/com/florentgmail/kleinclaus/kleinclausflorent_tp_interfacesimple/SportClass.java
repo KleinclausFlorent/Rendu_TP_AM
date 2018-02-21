@@ -4,6 +4,8 @@ import android.media.Image;
 
 /**
  * Created by Kleinclaus Florent on 17/02/2018.
+ * BUT : Définition de la classe sport afin de réaliser le tableau de sports qui sera utiliser par l'adapter pour remplir la listView
+ *
  */
 
 public class SportClass {

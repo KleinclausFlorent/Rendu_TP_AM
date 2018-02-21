@@ -10,6 +10,10 @@ import android.widget.TextView;
 
 /**
  * Created by Kleinclaus Florent on 23/11/2017.
+ * But : Page définition des sports / Utilise les extra pour afficher l'icone, la définition et le nom du sport / affiche aussi le nom et prénom de l'utilisateur
+ * Réagi au clique bouton home / clique bouton retour à la page des sports
+ * Entrée : elements de ma view a remplir ou a surveiller/ Les variables provenant de la page des sports et les cliques utilisateur
+ * Sortie : La page associé au sport / La redirection en fonction du bouton cliqué
  */
 
 public class defSport extends AppCompatActivity {

@@ -13,6 +13,9 @@ import java.util.ArrayList;
 
 /**
  * Created by Kleinclaus Florent on 23/11/2017.
+ * But : Affichage de la liste des sports et réaction au clique sur les éléments de la liste de sports
+ * Entree : Nom utilisateur et prenom / elements de ma view a remplir ou a surveiller
+ * Sortie : Réaction au clique sur la liste / boutons et affichage des infos utilisateurs
  */
 
 public class sports extends AppCompatActivity {
@@ -80,6 +83,12 @@ public class sports extends AppCompatActivity {
 
 
     }
+
+    /*
+    * But : Initialiser le tableau des sport
+    * Entree : Le tableau des sport / ( les valeurs proviennent de la page string.xml
+    * Sortie : Le tableau rempli avec les sports / leur définition et leur icone
+     */
 
     private void initList(ArrayList<SportClass> sportList)
     {

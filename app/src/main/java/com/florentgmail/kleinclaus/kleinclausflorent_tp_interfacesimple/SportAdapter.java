@@ -13,6 +13,9 @@ import java.util.ArrayList;
 
 /**
  * Created by Kleinclaus Florent on 17/02/2018.
+ * But : Indiquer au listview quoi afficher et où l'afficher
+ * Entrée : context, tableau des sports, la viewlist
+ * Sortie : info du tableau placer dans la vue
  */
 
 public class SportAdapter extends ArrayAdapter<SportClass> {

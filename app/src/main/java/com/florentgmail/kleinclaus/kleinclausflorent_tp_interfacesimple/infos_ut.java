@@ -12,6 +12,9 @@ import android.widget.TextView;
 
 /**
  * Created by Kleinclaus Florent on 22/11/2017.
+ * BUT : Réaction au cliques bouton / remplissage de la page avec les infos utilisateurs ou infos par default
+ * ENTREE : Les valeurs reçus de la vue précédente ou les cliques utilisateurs
+ * Sortie : Page remplie avec info utilisateur / redirection vers la vue d'accueil ou la page des sports
  */
 
 public class infos_ut extends AppCompatActivity {
