@@ -36,18 +36,29 @@ public class SportAdapter extends ArrayAdapter<SportClass> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = convertView;
+        ViewHolder holder;
+
         if (view == null) {
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = layoutInflater.inflate(viewRes, parent,false);
+            holder = new ViewHolder();
+            holder.title = (TextView) view.findViewById(R.id.title);
+            holder.icon = (ImageView) view.findViewById(R.id.icon);
+            view.setTag(holder);
+        } else {
+            holder = (ViewHolder) view.getTag();
         }
 
-        TextView  title = view.findViewById(R.id.title);
-        title.setText(sportList.get(position).getSportName());
+        holder.title.setText(sportList.get(position).getSportName());
 
-        ImageView icon = view.findViewById(R.id.icon);
-        icon.setImageResource(sportList.get(position).getImgRes());
+        holder.icon.setImageResource(sportList.get(position).getImgRes());
 
         return view;
 
     }
+    static class ViewHolder {
+        TextView title;
+        ImageView icon;
+    }
+
 }
